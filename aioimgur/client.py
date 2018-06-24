@@ -586,7 +586,7 @@ class ImgurClient(object):
 
     async def upload_from_path(self, path, config=None, anon=True):
         with open(path, 'rb') as fd:
-            self.upload(fd, config, anon)
+            return await self.upload(fd, config, anon)
 
     async def upload(self, fd, config=None, anon=True):
         if not config:
