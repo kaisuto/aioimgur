@@ -593,7 +593,7 @@ class ImgurClient(object):
             config = dict()
 
         contents = fd.read()
-        b64 = base64.b64encode(contents)
+        b64 = base64.b64encode(contents).decode('utf-8')
         data = {
             'image': b64,
             'type': 'base64',
